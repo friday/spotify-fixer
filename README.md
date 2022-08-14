@@ -8,10 +8,23 @@ This small scripts does two things:
 2. It checks for and tries to use your HiDPI settings from _your_ gsettings (dconf),
    including both screen and font scaling.
 
+## Dependencies
+* spotify
+* python-gobject
+* libwnck3 (optional, but required to have Spotify run as a single window app in X11)
+
 ## Usage
 
 * It should be placed in PATH, in a location that overrules /usr/bin/.
 * It expects spotify to be located in /usr/bin/spotify
+
+# Arch install
+```sh
+sudo yay -S --needed spotify python-gobject libwnck3
+
+sudo wget -P /usr/local/bin/ https://raw.githubusercontent.com/friday/spotify-fixer/main/spotify
+sudo chmod +x /usr/local/bin/spotify
+```
 
 ## License
 
